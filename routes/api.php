@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get("getcountry",'StudentController@getcountry');
+Route::get("viewcountry/{id}",'StudentController@getcountry_view');
+Route::post('save_country','StudentController@getcountry_save');
