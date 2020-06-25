@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//GEt -- user request to view a page
+//post  -- User reqest server to save data.
+//Put
+//
+Route::get('/form','routing@viewform');
+
+Route::post('/submitform','LogininfoController@submitdata');
+
+Route::get('/edit/{id}','LogininfoController@view_edit_form');
+
+Route::post('/editdata','LogininfoController@submiteditdata');
+
+Route::get('/delete/{id}','LogininfoController@deleteData');
